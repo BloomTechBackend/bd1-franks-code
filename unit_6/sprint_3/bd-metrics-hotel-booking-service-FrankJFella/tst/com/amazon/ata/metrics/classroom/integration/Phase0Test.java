@@ -14,7 +14,7 @@ public class Phase0Test {
     private static final String RESERVATIONS_TABLE_NAME = TABLE_NAME_PREFIX + "Reservations";
 
     private final DynamoDB client = new DynamoDB(AmazonDynamoDBClientBuilder.standard()
-        .withRegion(Regions.US_WEST_2).build());
+        .withRegion(Regions.US_EAST_2).build());
 
     @ParameterizedTest
     @ValueSource(strings = {RESERVATIONS_TABLE_NAME})

@@ -7,6 +7,8 @@ public class UsePlayingCards {
 // We know this is the application program because it has the main() method
 	public static void main(String[] args) {
 
+		int[] nums = new int[10];
+
 		AmericanPlayingCard aUSACard = new AmericanPlayingCard(1, "HEARTS");
 		System.out.println("aUSACard is :");
 		aUSACard.showCard();  // runs the AmericanPlayingCard showCard()

@@ -16,7 +16,7 @@ public class Phase0Test {
     private static final String GROUP_MEMBERSHIP_AUDITS_TABLE_NAME = TABLE_NAME_PREFIX + "GroupMembershipAudits";
 
     private final DynamoDB client = new DynamoDB(AmazonDynamoDBClientBuilder.standard()
-        .withRegion(Regions.US_WEST_2).build());
+        .withRegion(Regions.US_EAST_2).build());
 
     @ParameterizedTest
     @ValueSource(strings = {GROUPS_TABLE_NAME, GROUP_MEMBERSHIPS_TABLE_NAME,

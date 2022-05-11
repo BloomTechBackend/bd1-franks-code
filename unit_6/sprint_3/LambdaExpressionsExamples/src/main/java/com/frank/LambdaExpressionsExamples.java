@@ -31,6 +31,20 @@ public class LambdaExpressionsExamples {
      // names.stream().forEach( (aName) -> {System.out.println("Name: " + aName);});
 
         /***************************************************************************************
+         * stream().map() Stream Interface function
+         **************************************************************************************/
+        System.out.println("\n-------- Showing first initials   ---------");
+
+        // Go through the list of names and extract only the first letter of each name
+        // We will use stream().map() method with a Lambda expression that extracts the first letter
+        // Since stream().map() returns a Stream object, we need to convert to a List so we can use it
+
+        List<String> firstInitials = names.stream().map((aName) -> {return (aName.substring(0,1));})
+                .collect(Collectors.toList());
+
+        firstInitials.forEach( (aName) -> {System.out.println("Name: " + aName);});
+
+        /***************************************************************************************
          * stream().filter() Stream Interface function
          **************************************************************************************/
         System.out.println("\n-------- Removing Frank from List ---------");
@@ -53,20 +67,6 @@ public class LambdaExpressionsExamples {
         List<Integer> divBy3 = numList.stream().filter((aNum) -> {return (aNum % 3 == 0 ? true : false); }).collect(Collectors.toList());
 
         divBy3.forEach( (aNum) -> {System.out.println("\tnumber divisible by 3: " + aNum);});
-
-        /***************************************************************************************
-         * stream().map() Stream Interface function
-         **************************************************************************************/
-        System.out.println("\n-------- Showing first initials   ---------");
-
-        // Go through the list of names and extract only the first letter of each name
-        // We will use stream().map() method with a Lambda expression that extracts the first letter
-        // Since stream().map() returns a Stream object, we need to convert to a List so we can use it
-
-        List<String> firstInitials = names.stream().map((aName) -> {return (aName.substring(0,1));})
-                                                   .collect(Collectors.toList());
-
-        firstInitials.forEach( (aName) -> {System.out.println("Name: " + aName);});
 
         /***************************************************************************************
          * stream().reduce() Stream Interface function

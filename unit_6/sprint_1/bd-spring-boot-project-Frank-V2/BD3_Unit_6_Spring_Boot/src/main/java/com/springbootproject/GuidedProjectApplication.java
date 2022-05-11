@@ -1,15 +1,13 @@
-package com.frank.springproject;
+package com.springbootproject;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SampleSpringProjectApplication {
+public class GuidedProjectApplication {
 
-	// Spring Boot Application
 	public static void main(String[] args) {
-		SpringApplication.run(SampleSpringProjectApplication.class, args);
+		SpringApplication.run(GuidedProjectApplication.class, args);
 	}
 
 }
-
